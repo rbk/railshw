@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 1
+  title: Learning Rails the Hard Way
+  isbn: 1111111111
+  download_size: 1000
+  weight: 
+  type: Ebook
+  category_id: 2
+  publisher_id: 1
+
+two:
+  id: 2
+  title: Javascript for Experts
+  isbn: 2222222222
+  download_size: 
+  weight: 2.2
+  type: Pbook
+  category_id: 2
+  publisher_id: 2
+  
+three:
+  id: 3
+  title: Cake baking
+  isbn: 33333333333
+  download_size: 
+  weight: 1.1
+  type: Pbook
+  category_id:
+  publisher_id: 1

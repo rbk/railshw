@@ -1,0 +1,18 @@
+<h1 id="title">
+	Title: <%= @episode.title %>
+</h1>
+<div>
+	<strong>Series:</strong>
+	<%= @episode.series.title %>
+</div>
+<br/>
+<div>
+	<strong>Description:</strong><br/>
+	<%= @episode.description %>
+</div>
+
+
+
+<br>
+<%= link_to 'Edit', edit_episode_path( @episode.id ) %><br/>
+<%= link_to 'Go Back', episodes_path %>

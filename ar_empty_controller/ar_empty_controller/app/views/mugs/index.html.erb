@@ -1,0 +1,31 @@
+<h1>Listing mugs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Capacity</th>
+      <th>Material</th>
+      <th>Decoration</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mugs.each do |mug| %>
+      <tr>
+        <td><%= mug.capacity %></td>
+        <td><%= mug.material %></td>
+        <td><%= mug.decoration %></td>
+        <td><%= link_to 'Show', mug %></td>
+        <td><%= link_to 'Edit', edit_mug_path(mug) %></td>
+        <td><%= link_to 'Destroy', mug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mug', new_mug_path %>

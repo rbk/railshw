@@ -1,0 +1,24 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  username: noahsinger
+  password_salt: jGkleGS0
+  password_hash: 1af5e9baa63252b77fef8f0d9402b717109e4a64914c05c53ea351a358967275
+  email: professorsinger@ingenio.us.com
+  confirmation_code: d67c55aa0497b14d715313b5ff9f2305b9330aaa6de42514ba9a85d6ca0d3544
+  cancelation_code: 02f3b73dd3ce1cb69bc4b47fdec953157a51b50d96faf648a0b595bcd6f88980
+  verified: false
+  first_name: Noah
+  last_name: Singer
+
+# two:
+#   username: MyString
+#   first_name: MyString
+#   last_name: MyString
+#   email: MyString
+#   verified: false
+#   password_hash: MyString
+#   password_salt: MyString
+#   confirmation_code: MyString
+#   cancelation_code: MyString

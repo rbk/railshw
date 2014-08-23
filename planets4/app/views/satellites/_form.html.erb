@@ -1,0 +1,20 @@
+
+<%= form_for @satellite do | f | %>
+	
+	<div class="field">
+
+			<div class="field">
+				<%= f.label :name %>
+				<%= f.text_field :name %>
+			</div>
+			<div class="field">
+				<%= f.label :parent_id %>
+				<%= f.select :parent_id, Satellite.all.collect {| satellite | [satellite.name, satellite.id] }, { include_blank: true } %>
+			</div>
+
+			<div class="buttons">
+				<%= f.submit %>
+			</div>
+
+	</div>
+<% end %>

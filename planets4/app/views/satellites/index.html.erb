@@ -1,0 +1,19 @@
+<h1>Index Action</h1>
+
+
+
+<ul id="main-list">
+	<% @satellites.each do | satellite |  %>
+
+		<li>
+				<%= satellite.id %> - 
+				<%= link_to satellite.name, satellite %>
+				<%= link_to 'show', satellite %>
+				<%= link_to 'edit', edit_satellite_path( satellite ) %>
+				<%= link_to 'kill', satellite, method: :delete %>
+		</li>
+
+	<% end %>
+</ul>
+
+<h3><div class="buttons"><%= link_to 'Create new satellite', new_satellite_path %></div></h3>

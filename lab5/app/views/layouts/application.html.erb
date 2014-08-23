@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab5</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav id="top">
+	<ul>
+		<li><%= link_to 'Home', root_path %></li>
+		<li><%= link_to 'New Episode', new_episode_path %></li>
+	</ul>
+</nav>
+<article>
+	<%= yield %>
+</article>
+
+</body>
+</html>

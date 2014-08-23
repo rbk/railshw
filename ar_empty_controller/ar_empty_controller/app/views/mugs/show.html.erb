@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @mug.capacity %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @mug.material %>
+</p>
+
+<p>
+  <strong>Decoration:</strong>
+  <%= @mug.decoration %>
+</p>
+
+<%= link_to 'Edit', edit_mug_path(@mug) %> |
+<%= link_to 'Back', mugs_path %>

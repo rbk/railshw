@@ -1,0 +1,43 @@
+<h1 id="title">Episodes</h1>
+
+<%= notice %>
+
+<% if @episodes.empty? %>
+	<p>No episodes in database.</p>
+<% else %>
+	
+	<p>Thank you Emmet: <i><b>table>(thead>tr>th*7)(tbody>tr>td*7)</b></i></p>
+	<table id="episodes_table">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Desciption</th>
+				<th>Episode Number</th>
+				<!-- <th>Series ID</th> -->
+				<th>Series Name</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @episodes.each do | episode | %>
+			<tr>
+				<td><%= episode.title %></td>
+				<td><%= episode.description %></td>
+				<td><%= episode.episode_number %></td>
+				<!-- <td><%= episode.series_id %></td> -->
+				<td><%= episode.series.title %></td>
+				<td><%= link_to 'Show', episode %></td>
+				<td><%= link_to 'Edit', edit_episode_path(episode) %></td>
+				<td><%= link_to 'Destroy', episode, method: :delete %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<div id="new_form"></div>
+	<br/>
+	<%= link_to 'New Episode', new_episode_path, remote: true %>
+
+<% end %>

@@ -1,0 +1,31 @@
+<%= form_for @lightsaber do |f| %>
+	<div class="field">
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :description %><br/>
+		<%= f.text_area :description %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :color %>
+		<%= f.text_field :color %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :darkside %>
+		<%= f.check_box :darkside %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :image %>
+		<%= f.text_field :image %>
+	</div>
+	
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+		
+<% end %>

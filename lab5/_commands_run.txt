@@ -1,0 +1,2 @@
+rails g model Episode title:string description:text episode_number:integer
+rails g controller episodes index show new create edit update delete

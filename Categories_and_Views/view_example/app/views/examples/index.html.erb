@@ -1,0 +1,23 @@
+<h1>Examples#index</h1>
+<p>Find me in app/views/examples/index.html.erb</p>
+
+Wowwie, wow, wow!
+
+<p>
+	<% 
+		a = []
+		a.push(1)
+		a.push(3)
+		a.push(9)
+	%>
+	
+	<%= a.join(", ") %>
+	
+	<%# this is a comment %>
+</p>
+
+<ul>
+	<% a.each do |value| %>
+		<li><%= value %></li>
+	<% end %>
+</ul>

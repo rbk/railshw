@@ -1,0 +1,29 @@
+<%= form_for(@mug) do |f| %>
+  <% if @mug.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mug.errors.count, "error") %> prohibited this mug from being saved:</h2>
+
+      <ul>
+      <% @mug.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :capacity %><br>
+    <%= f.number_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br>
+    <%= f.text_field :material %>
+  </div>
+  <div class="field">
+    <%= f.label :decoration %><br>
+    <%= f.text_area :decoration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

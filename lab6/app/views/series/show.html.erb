@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @series.title %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @series.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @series.end_date %>
+</p>
+
+<div><strong>Episode Count:</strong> <%= @series.episodes.count %></div><br/>
+
+<strong>Episodes</strong>
+<ol>
+<% @series.episodes.each do |e| %>
+<li><%= link_to e.title, episode_path(e) %></li>
+<% end %>
+</ol>
+<%= link_to 'Edit', edit_series_path(@series) %> |
+<%= link_to 'Back', series_index_path %>

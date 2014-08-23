@@ -1,0 +1,40 @@
+<h1>Listing Lightsabers</h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Color</th>
+		<th>Darkside</th>
+		<th>Image</th>
+		<th></th>
+	</tr>
+	<% @lightsabers.each do |lightsaber| %>
+		<tr>
+			<td><%= link_to lightsaber.name, lightsaber %></td>
+			<td><%= truncate lightsaber.description %></td>
+			<td><%= lightsaber.color %></td>
+			<td><%= lightsaber.darkside %></td>
+			<td><%= display lightsaber, 50 %></td>
+			<td>
+				<%= link_to 'edit', edit_lightsaber_path(lightsaber) %> |
+				<%= link_to 'destroy', lightsaber, method: :delete %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to 'new lightsaber', new_lightsaber_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+

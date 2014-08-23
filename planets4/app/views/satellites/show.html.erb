@@ -1,0 +1,15 @@
+<h1 style="color:green">Satellite Name: <%= @satellite.name %></h1>
+<h2 style="color: red">Parent Satellite: <%= get_parent %></h2>
+<h3 style="color: blue">Chillens</h3>
+<% if !get_children_satellites.nil? %>
+<ul>
+	<% @children.each do |c| %>
+	<li><%= link_to c.name, edit_satellite_path( c ) %></li>
+	<% end %>
+</ul>
+<% end %>
+
+<div class="buttons">
+	<%= link_to 'Back', satellites_path %>
+	<%= link_to 'Edit', edit_satellite_path %>
+</div>
